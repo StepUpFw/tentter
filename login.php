@@ -15,11 +15,13 @@
         }
         $sql = 'SELECT mail,uid,pass FROM users';
         $results = $db->query($sql);
-        while($rows = $results->fetchArray(SQLITE3_ASSOC)){
+        while($rows = $results->fetchArray()){
             if($rows['uid'] == $uid && $rows['pass'] == $super_pass){
+                $_SESSION['id'] = $uid;
+                header("Location: http://reizou05.xsrv.jp/tentter/sign.php?i=success");
             }
         }
         $db->close();
-        header("Location: http://reizou05.xsrv.jp/tentter/sign.php?i=success");
+        header("Location: http://reizou05.xsrv.jp/tentter/sign.php?i=denied");
     }
 ?>
