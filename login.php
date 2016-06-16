@@ -16,7 +16,7 @@
         $sql = 'SELECT mail,uid,pass FROM users';
         $results = $db->query($sql);
         while($rows = $results->fetchArray(SQLITE3_ASSOC)){
-            if($rows['uid'] == $uid && $rows['pass'] == $hpass){
+            if($rows['uid'] == $uid && $rows['pass'] == $super_pass){
             }
         }
         $db->close();
