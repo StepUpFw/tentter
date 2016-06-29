@@ -11,8 +11,6 @@
         die('クエリーが失敗しました1'.$error);
     }
     while($rows = $results->fetchArray()){
-        print($key);
-        var_dump($rows);
         if($rows['key'] == $key){
             $mail = $rows['mail'];
             $uid = $rows['uid'];
