@@ -11,16 +11,13 @@
         die('クエリーが失敗しました1'.$error);
     }
     while($rows = $results->fetchArray()){
-        print($key);
-        var_dump($rows);
         if($rows['key'] == $key){
             $mail = $rows['mail'];
             $uid = $rows['uid'];
             $pass = $rows['pass'];
-        }else{
-            die("ユーザー登録に失敗しました1");
         }
     }
+    if(!isset($mail)) die("ユーザー登録に失敗しました1");
     $sql = "INSERT INTO users (mail,uid,pass) VALUES ('$mail','$uid','$pass');";
     $results = $db->query($sql);
     if(!$results){

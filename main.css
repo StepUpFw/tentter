@@ -1,0 +1,29 @@
+body{
+	font-family:
+	'M+ C Type-1 (basic latin) Regular',
+	'M+ Type-1 (general-j) Regular', sans-serif;
+}
+.main{
+    width: 70%;
+    margin:0 auto;
+}
+p.id{
+	position: relative;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.logout{
+	position: relative;
+	text-align: right;
+	top: -40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+table.timeline{
+	position: relative;
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	font-size: 16px;
+	width: 770px;
+}
