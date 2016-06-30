@@ -17,10 +17,11 @@
             $tweet = $rows['tweet'];
         }
     }
-    $twi = "RT" . " from " . $tuid . ":" . $tweet;
     if($tid == ""){
         die("無理です");
     }else{
+        $twi = "RT" . " from " . $tuid . ":" . $tweet;
+        $tid = sha1(uniqid(rand(),1));
         $sql = "INSERT INTO tweet (id,tid,uid,tweet) VALUES ('$id','$tid','$muid','$twi');";
         $results = $db->query($sql);
     }
